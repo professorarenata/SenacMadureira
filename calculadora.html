@@ -1,15 +1,57 @@
 <html>
 <head>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+	<link rel="shortcut icon" href="http://www.iconarchive.com/download/i75811/martz90/circle/calculator.ico">
 <style>
-body{
-	background-image: url('https://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg');
-	
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+h1 {
+	font-family: "Lucida Console";
 }
-div{
-	background-color: #ffffff;
-	width:20%;
-	border-radius: 20px;
-	}
+form {
+	font-family: 'Poppins', sans-serif;
+}
+section {
+	background: linear-gradient(to bottom left, #3366ff 0%, #66ff99 100%);
+	border: 3px solid black;
+	box-shadow: -2px 3px 2px black;
+	margin:auto;
+	margin-top: 30px;	
+	border-radius:20px;
+	padding-bottom:20px;
+	width: 500px;
+}
+input {
+	text-align:center;
+	font-family: "Lucida Console";
+}
+.texto {
+	margin:10px;
+	padding:5px;
+	width:100px;
+}
+.botaum {
+	font-size:30px;
+	width:40px;
+}
+.cores {
+	font-size:20px;
+	width:200px;
+	margin:1px;
+}
+@media (max-width:576px) {
+	section {
+		width: 300px;
+		}
+}
+.caixa {
+	display: flex;
+	flex-direction: column;
+}
+.caixa2 {
+	display: flex;
+	justify-content: space-around;
+}
 </style>
 <script>
 function soma(form1)
@@ -17,51 +59,63 @@ function soma(form1)
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a+b);
-   alert("A soma dos números é:  "+c);
+   alert("A soma dos nÃºmeros Ã©:  "+c);
 }
-
-function subtração(form1)
+function sub(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a-b);
-   alert("A subtração dos números é:  "+c);
+   alert("A subtraÃ§Ã£o dos nÃºmeros Ã©:  "+c);
 }
-
-function multiplicação(form1)
+function mult(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a*b);
-   alert("A multiplicação dos números é:  "+c);
+   alert("A multiplicaÃ§Ã£o dos nÃºmeros Ã©:  "+c);
 }
-
-function divisão(form1)
+function div(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a/b);
-   alert("A divisão dos números é:  "+c);
+   alert("A divisÃ£o dos nÃºmeros Ã©:  "+c);
+}
+function MudaCor(COR) {
+switch (COR) {
+	case 'Lavender':document.bgColor= 'Lavender'; break;
+	case 'SpringGreen':document.bgColor= 'SpringGreen'; break;
+	case 'Coral':document.bgColor= '#FF7F50'; break;
+	case 'DeepSkyBlue':document.bgColor= '#00BFFF'; break;
+	case 'Fuchsia':document.bgColor= 'Fuchsia'; break;
+	case 'White':document.bgColor= 'White'; break;
+	}
 }
 </script>
 </head>
 <body>
-<div align="center">
-<h1>Calculadora <br><br> </h1>
-  <h3>
-Digite um número:
-<form name="form1">
-  <input type="text" name="t1"><br>
-  Digite outro número:<br>
-  <input type="text" name="t2"><br><br>
-  <input type="button" name="b1" value="+" onClick="soma(form1)">
-  <input type="button" name="b2" value="-" onClick="subtração(form1)">
-  <input type="button" name="b3" value="*" onClick="multiplicação(form1)">
-  <input type="button" name="b4" value="/" onClick="divisão(form1)">
-  <br><br>
-  
-</form>
- </h3>
-<div>
+	<section><center>
+		<h1>Calculadora</h1><br>
+		<form name="form1">
+			Digite um nÃºmero:<br>
+			<input class="texto" type="text" name="t1"><br>
+			Digite outro nÃºmero:<br>
+			<input class="texto" type="text" name="t2"><br><br>
+			<input class="botaum" type="button" name="b1" value="+" onClick="soma(form1)">
+			<input class="botaum" type="button" name="b2" value="-" onClick="sub(form1)">
+			<input class="botaum" type="button" name="b3" value="&times;" onClick="mult(form1)">
+			<input class="botaum" type="button" name="b4" value="&divide;" onClick="div(form1)"><br>
+		</form>
+		<form id="back" name="CorFundo">
+			Escolha o background:<br><br><div class="caixa2"><div class="caixa">
+			<input class="cores" type="button" name="fundo" Value="Lavender" onClick="MudaCor('Lavender');"><br>
+			<input class="cores" type="button" name="fundo" Value="SpringGreen" onClick="MudaCor('SpringGreen');"><br>
+			<input class="cores" type="button" name="fundo" Value="Coral" onClick="MudaCor('Coral');"><br></div><div class="caixa">
+			<input class="cores" type="button" name="fundo" Value="DeepSkyBlue" onClick="MudaCor('DeepSkyBlue');"><br>
+			<input class="cores" type="button" name="fundo" Value="Fuchsia" onClick="MudaCor('Fuchsia');"><br>
+			<input class="cores" type="button" name="fundo" Value="PadrÃ£o" onClick="MudaCor('White');"><br></div></div>
+		</form>
+	</section>
 </body>
 </html>
