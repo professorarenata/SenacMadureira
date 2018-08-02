@@ -1,5 +1,24 @@
 <html>
 <head>
+	<title>Calculadora v2.0</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.png">
+<style>
+body {
+	background-color: yellowgreen;
+}
+div {
+	background-color: yellow;
+	height: 200px;
+	margin-left: 600px;
+	margin-right: 600px;
+	border: 6px solid black;
+}
+h1 {
+	font-family: arial;
+}
+	
+</style>
 <script>
 function soma(form1)
 {
@@ -8,6 +27,7 @@ function soma(form1)
    c=new Number(a+b);
    alert("A soma dos números é:  "+c);
 }
+
 function subtração(form1)
 {
    a=new Number(form1.t1.value);
@@ -15,6 +35,7 @@ function subtração(form1)
    c=new Number(a-b);
    alert("A subtração dos números é:  "+c);
 }
+
 function multiplicação(form1)
 {
    a=new Number(form1.t1.value);
@@ -22,21 +43,23 @@ function multiplicação(form1)
    c=new Number(a*b);
    alert("A multiplicação dos números é:  "+c);
 }
+
 function divisão(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a/b);
    alert("A divisão dos números é:  "+c);
-}  
-  
-
+}
 </script>
 </head>
 
 <body>
-<center><h1>Calculadora <br><br> </h1>
+<br>
+<center><h1>&#9830;Calculadora&#9830;<br><br></h1>
+<div>
   <h3>
+  <br>
 Digite um número:
 <form name="form1">
   <input type="text" name="t1"><br>
@@ -47,9 +70,9 @@ Digite um número:
   <input type="button" name="b3" value="*" onClick="multiplicação(form1)">
   <input type="button" name="b4" value="/" onClick="divisão(form1)">
   <br><br>
-  Escolha a cor da HomePage:<br>
   
 </form>
+</div>
  </h3>
 
 </body>
