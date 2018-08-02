@@ -1,3 +1,49 @@
-body {
-	background-color: beige;
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+h1 {
+	font-family: "Lucida Console";
+}
+form {
+	font-family: 'Poppins', sans-serif;
+}
+section {
+	background-image: url('../img/bmw.jpg');
+	border: 3px solid black;
+	box-shadow: -2px 3px 2px black;
+	margin:auto;
+	margin-top: 30px;	
+	border-radius:20px;
+	padding-bottom:20px;
+	width: 500px;
+}
+input {
+	text-align:center;
+	font-family: "Lucida Console";
+}
+.texto {
+	margin:10px;
+	padding:5px;
+	width:100px;
+}
+.botaum {
+	font-size:30px;
+	width:40px;
+}
+.cores {
+	font-size:20px;
+	width:200px;
+	margin:1px;
+}
+@media (max-width:576px) {
+	section {
+		width: 300px;
+		}
+}
+.caixa {
+	display: flex;
+	flex-direction: column;
+}
+.caixa2 {
+	display: flex;
+	justify-content: space-around;
 }

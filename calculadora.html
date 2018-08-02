@@ -1,59 +1,78 @@
 <html>
 <head>
-<style>
-body{
-background-color: #eeeeee;
-}
-</style>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+	<link rel="shortcut icon" href="http://www.iconarchive.com/download/i75811/martz90/circle/calculator.ico">
+	<link rel="stylesheet" href="css/projeto.css">
+
 <script>
 function soma(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a+b);
-   alert("A soma dos números é:  "+c);
+   alert("A soma dos nÃºmeros Ã©:  "+c);
 }
-function subtração(form1)
+function sub(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a-b);
-   alert("A subtração dos números é:  "+c);
+   alert("A subtraÃ§Ã£o dos nÃºmeros Ã©:  "+c);
 }
-function multiplicação(form1)
+function mult(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a*b);
-   alert("A multiplicação dos números é:  "+c);
+   alert("A multiplicaÃ§Ã£o dos nÃºmeros Ã©:  "+c);
 }
-function divisão(form1)
+function div(form1)
 {
    a=new Number(form1.t1.value);
    b=new Number(form1.t2.value);
    c=new Number(a/b);
-   alert("A divisão dos números é:  "+c);
+   alert("A divisÃ£o dos nÃºmeros Ã©:  "+c);
+}
+function MudaCor(COR) {
+switch (COR) {
+	case 'Lavender':document.bgColor= 'Lavender'; break;
+	case 'SpringGreen':document.bgColor= 'SpringGreen'; break;
+	case 'Coral':document.bgColor= '#FF7F50'; break;
+	case 'DeepSkyBlue':document.bgColor= '#00BFFF'; break;
+	case 'Fuchsia':document.bgColor= 'Fuchsia'; break;
+	case 'White':document.bgColor= 'White'; break;
+	case 'SlateBlue':document.bgColor= '#6A5ACD'; break;
+	case 'grey41':document.bgColor= '#696969'; break;
+	}
 }
 </script>
 </head>
-
 <body>
-<center><h1 style="text-";>Calculadora <br><br> </h1>
-  <h3>
-Digite um número:
-<form name="form1">
-  <input type="text" name="t1"><br>
-  Digite outro número:<br>
-  <input type="text" name="t2"><br><br>
-  <input type="button" name="b1" value="+" onClick="soma(form1)">
-  <input type="button" name="b2" value="-" onClick="subtração(form1)" >
-  <input type="button" name="b3" value="*" onClick="multiplicação(form1)">
-  <input type="button" name="b4" value="/" onClick="divisão(form1)">
-  <br><br>
-  Escolha a cor da HomePage:<br>
-  
-</form>
- </h3>
-
+	<section><center>
+		<h1>Calculadora</h1><br>
+		<form name="form1">
+			Digite um nÃºmero:<br>
+			<input class="texto" type="text" name="t1"><br>
+			Digite outro nÃºmero:<br>
+			<input class="texto" type="text" name="t2"><br><br>
+			<input class="botaum" type="button" name="b1" value="+" onClick="soma(form1)">
+			<input class="botaum" type="button" name="b2" value="-" onClick="sub(form1)">
+			<input class="botaum" type="button" name="b3" value="&times;" onClick="mult(form1)">
+			<input class="botaum" type="button" name="b4" value="&divide;" onClick="div(form1)"><br>
+		</form>
+		<form id="back" name="CorFundo">
+			Escolha o background:<br><br><div class="caixa2"><div class="caixa">
+			<input class="cores" type="button" name="fundo" Value="Lavender" onClick="MudaCor('Lavender');"><br>
+			<input class="cores" type="button" name="fundo" Value="SpringGreen" onClick="MudaCor('SpringGreen');"><br>
+			<input class="cores" type="button" name="fundo" Value="Coral" onClick="MudaCor('Coral');"><br>
+			<input class="cores" type="button" name="fundo" Value="SlateBlue" onClick="MudaCor('SlateBlue');"><br></div><div class="caixa">
+			<input class="cores" type="button" name="fundo" Value="DeepSkyBlue" onClick="MudaCor('DeepSkyBlue');"><br>
+			<input class="cores" type="button" name="fundo" Value="Fuchsia" onClick="MudaCor('Fuchsia');"><br>
+			
+			<input class="cores" type="button" name="fundo" Value="grey41" onClick="MudaCor('grey41');"><br>
+			<input class="cores" type="button" name="fundo" Value="PadrÃ£o" onClick="MudaCor('White');"><br></div></div>
+		</form>
+	</section>
 </body>
 </html>
