@@ -7,12 +7,11 @@ form {
 	font-family: 'Poppins', sans-serif;
 }
 section {
-	background-image: url('../img/bmw.jpg');
-	border: 3px solid black;
-	box-shadow: -2px 3px 2px black;
+	border: 3px solid gray;
+	box-shadow: -2px 3px 2px yellow;
 	margin:auto;
-	margin-top: 30px;	
-	border-radius:20px;
+	margin-top: 40px;	
+	border-radius:30px;
 	padding-bottom:20px;
 	width: 500px;
 }
