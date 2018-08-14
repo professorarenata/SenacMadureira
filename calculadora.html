@@ -1,10 +1,5 @@
 <html>
 <head>
-<style>
-body {
-	background-color:blue;
-	{
-</style>	
 <script>
 function soma(form1)
 {
@@ -12,34 +7,42 @@ function soma(form1)
    b=new Number(form1.t2.value);
    c=new Number(a+b);
    alert("A soma dos números é:  "+c);
+	
 }
-function subtração(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a-b);
-   alert("A subtração dos números é:  "+c);
-}
-function multiplicação(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a*b);
-   alert("A multiplicação dos números é:  "+c);
-}
-function divisão(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a/b);
-   alert("A divisão dos números é:  "+c);
-}  
-  
-
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+h1 {
+	font-family: "Lucida Console";
+}
+section {
+	background: linear-gradient(to bottom left, #CDC9A5 0%, #8B8970 100%);
+	border: 3px solid black;
+	box-shadow: -2px 3px 2px black;
+	margin:auto;
+	margin-top: 30px;	
+	border-radius:20px;
+	padding-bottom:20px;
+	width: 500px;
+}
+form {
+	font-family: 'Poppins', sans-serif;
+}
+
+input {
+	text-align:center;
+	font-family: "Lucida Console";
+}
+@media (max-width:576px) {
+	input {
+		width: 300px;
+		}
+}
+</style>
 </head>
 
 <body>
+<section>
 <center><h1>Calculadora <br><br> </h1>
   <h3>
 Digite um número:
@@ -48,14 +51,15 @@ Digite um número:
   Digite outro número:<br>
   <input type="text" name="t2"><br><br>
   <input type="button" name="b1" value="+" onClick="soma(form1)">
-  <input type="button" name="b2" value="-" onClick="subtração(form1)">
-  <input type="button" name="b3" value="*" onClick="multiplicação(form1)">
-  <input type="button" name="b4" value="/" onClick="divisão(form1)">
+  <input type="button" name="b2" value="-">
+  <input type="button" name="b3" value="*">
+  <input type="button" name="b4" value="/">
   <br><br>
-  Escolha a cor da HomePage:<br>
-  
-</form>
- </h3>
+  <br>
+   <p><input type="reset" value="Limpar calculadora"></p>
 
+   </form>
+ </h3>
+</section>
 </body>
 </html>
