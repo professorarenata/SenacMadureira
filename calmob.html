@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+<script>
+function soma(form1)
+{
+   a=new Number(form1.t3.value);
+   b=new Number(form1.t4.value);
+   c=new Number(a+c);
+   alert("A soma dos n�meros �:  "+a);
+	
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+h1 {
+	font-family: "Lucida Console";
+}
+section {
+	background: linear-gradient(to bottom left, #bbbbbb 0%, #8B8970 100%);
+	border: 3px solid gray;
+	box-shadow: -2px 3px 2px green;
+	margin:auto;
+	margin-top: 30px;	
+	border-radius:20px;
+	padding-bottom:20px;
+	width: 500px;
+}
+form {
+	font-family: 'Poppins', sans-serif;
+}
+
+input {
+	text-align:center;
+	font-family: "Lucida Console";
+}
+@media (max-width:576px) {
+	input {
+		width: 300px;
+		}
+}
+</style>
+</head>
+
+<body>
+<section>
+<center><h1>Calculadora <br><br> </h1>
+  <h3>
+Digite um n�mero:
+<form name="form1">
+  <input type="text" name="t1"><br>
+  Digite outro n�mero:<br>
+  <input type="text" name="t2"><br><br>
+  <input type="button" name="b1" value="+" onClick="soma(form1)">
+  <input type="button" name="b2" value="-">
+  <input type="button" name="b3" value="*">
+  <input type="button" name="b4" value="/">
+  <br><br>
+  <br>
+   <p><input type="reset" value="Limpar calculadora"></p>
+
+   </form>
+ </h3>
+</section>
+</body>
+</html>
